@@ -3,7 +3,7 @@ on: [push, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-22.04  # Вместо ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -11,7 +11,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.9'  # Использование 3.9 для совместимости с jnius
+          python-version: '3.9'
 
       - name: Install system dependencies
         run: |
@@ -24,7 +24,7 @@ jobs:
           pip install "jnius>=1.4.0"
 
       - name: Build APK
-        run: buildozer android debug
+        run: buildozer -v android debug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
