@@ -429,9 +429,9 @@ ios.codesign.allowed = false
 # This option should be defined along with `app_url` and `display_image_url` options.
 #ios.manifest.full_size_image_url =
 
-android.api = 34
-android.minapi = 21
+android.api = 33
 android.ndk = 25b
+requirements = python3, kivy, jnius>=1.4.0
 
 
 
