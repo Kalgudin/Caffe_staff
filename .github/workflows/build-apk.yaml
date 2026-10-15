@@ -23,7 +23,6 @@ jobs:
           pip install buildozer
           pip install "pyjnius>=1.4.0"
 
-      # НОВЫЙ ШАГ: Автоматическое принятие лицензий Android SDK
       - name: Accept Android SDK licenses
         run: |
           mkdir -p ~/.buildozer/android/platform/android-sdk/licenses
