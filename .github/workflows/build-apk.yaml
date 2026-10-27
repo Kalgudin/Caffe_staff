@@ -23,6 +23,12 @@ jobs:
         with:
           packages: ''
 
+      - name: Link sdkmanager for Buildozer
+        run: |
+          SDK=~/.buildozer/android/platform/android-sdk
+          mkdir -p "$SDK/tools/bin"
+          ln -sf /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager "$SDK/tools/bin/sdkmanager"
+
       - name: Install Buildozer and Cython
         run: |
           pip install buildozer
