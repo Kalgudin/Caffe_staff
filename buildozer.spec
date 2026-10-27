@@ -26,4 +26,4 @@ android.permissions = INTERNET
 orientation = portrait
 
 # Отключаем лишние архитектуры для скорости (только arm64 для современных телефонов)
-android.archs = arm64-v8aы
+android.archs = arm64-v8a
